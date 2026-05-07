@@ -1,7 +1,7 @@
 # ============================================================================
 # MikroTik RouterOS - Indonesian Banking & Payment Address List
 # ============================================================================
-# Generated: 2026-05-07 | Total entries: 137 active (+ 4 optional CDN ranges)
+# Generated: 2026-05-07 | Total entries: 135 active (+ 4 optional CDN ranges)
 # 
 # IMPORTANT:
 # - IP addresses are point-in-time snapshots — CDN IPs WILL rotate
@@ -13,8 +13,8 @@
 #   /import file-name=mikrotik-banking.rsc
 # ============================================================================
 
-# --- Optional: Clear existing list for clean import ---
-# /ip firewall address-list remove [find where list=BANKING]
+# --- Clear existing list for clean import ---
+/ip firewall address-list remove [find where list=BANKING dynamic=no]
 
 # ============================================================================
 # SECTION 1: INDONESIAN BANKS
@@ -48,7 +48,7 @@
 /ip firewall address-list add list=BANKING address=103.108.254.0/23 comment="BNI - own IP block (PT Bank Negara Indonesia)"
 /ip firewall address-list add list=BANKING address=45.223.65.109 comment="BNI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.66.109 comment="BNI (Imperva)"
-/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BNI Direct/Digital (Imperva)"
+/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BNI/BSI/BTN shared (Imperva)"
 /ip firewall address-list add list=BANKING address=bni.co.id comment="BNI - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bni.co.id comment="BNI - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=ibank.bni.co.id comment="BNI - Internet Banking (DNS)"
@@ -74,7 +74,6 @@
 /ip firewall address-list add list=BANKING address=45.223.170.70 comment="BSI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.166.70 comment="BSI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.140.198 comment="BSI Mobile/API (Imperva)"
-/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BSI Digital/QRIS (Imperva)"
 /ip firewall address-list add list=BANKING address=bankbsi.co.id comment="BSI - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bankbsi.co.id comment="BSI - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=api.bankbsi.co.id comment="BSI - API Gateway (DNS)"
@@ -109,7 +108,6 @@
 /ip firewall address-list add list=BANKING address=api.danamon.co.id comment="Danamon D-Bank PRO API (DNS)"
 
 # ---- BTN (Bank Tabungan Negara) ---- Imperva CDN ----
-/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BTN (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.138.74 comment="BTN (Imperva)"
 /ip firewall address-list add list=BANKING address=btn.co.id comment="BTN (DNS)"
 /ip firewall address-list add list=BANKING address=www.btn.co.id comment="BTN WWW (DNS)"
