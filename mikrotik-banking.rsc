@@ -1,7 +1,7 @@
 # ============================================================================
 # MikroTik RouterOS - Indonesian Banking & Payment Address List
 # ============================================================================
-# Generated: 2026-05-07 | Total entries: 140 (107 active + 4 optional CDN ranges)
+# Generated: 2026-05-07 | Total entries: 137 active (+ 4 optional CDN ranges)
 # 
 # IMPORTANT:
 # - IP addresses are point-in-time snapshots — CDN IPs WILL rotate
@@ -30,21 +30,35 @@
 /ip firewall address-list add list=BANKING address=bca.co.id comment="BCA - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bca.co.id comment="BCA - Main Site WWW (DNS)"
 /ip firewall address-list add list=BANKING address=mybca.bca.co.id comment="BCA - myBCA App (DNS)"
+/ip firewall address-list add list=BANKING address=api.mybca.bca.co.id comment="BCA - myBCA API (DNS)"
+/ip firewall address-list add list=BANKING address=halo.bca.co.id comment="BCA - HaloBCA (DNS)"
+/ip firewall address-list add list=BANKING address=developer.bca.co.id comment="BCA - Developer/Open API (DNS)"
 
 # ---- Bank Mandiri ---- AWS Jakarta + Akamai CDN ----
 /ip firewall address-list add list=BANKING address=bankmandiri.co.id comment="Mandiri - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bankmandiri.co.id comment="Mandiri - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=api.bankmandiri.co.id comment="Mandiri - API (DNS)"
 /ip firewall address-list add list=BANKING address=livin.mandiri.co.id comment="Mandiri - Livin App (DNS)"
+/ip firewall address-list add list=BANKING address=kopra.bankmandiri.co.id comment="Mandiri - Kopra Corporate Banking (DNS)"
+/ip firewall address-list add list=BANKING address=qris.bankmandiri.co.id comment="Mandiri - QRIS Payment (DNS)"
+/ip firewall address-list add list=BANKING address=mandiri.co.id comment="Mandiri - Corporate Site (DNS)"
+/ip firewall address-list add list=BANKING address=livin.co.id comment="Mandiri - Livin by Mandiri (DNS)"
 
-# ---- BNI (Bank Negara Indonesia) ---- Imperva CDN ----
+# ---- BNI (Bank Negara Indonesia) ---- Imperva CDN + Own IP block ----
+/ip firewall address-list add list=BANKING address=103.108.254.0/23 comment="BNI - own IP block (PT Bank Negara Indonesia)"
 /ip firewall address-list add list=BANKING address=45.223.65.109 comment="BNI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.66.109 comment="BNI (Imperva)"
+/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BNI Direct/Digital (Imperva)"
 /ip firewall address-list add list=BANKING address=bni.co.id comment="BNI - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bni.co.id comment="BNI - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=ibank.bni.co.id comment="BNI - Internet Banking (DNS)"
+/ip firewall address-list add list=BANKING address=api.bni.co.id comment="BNI - API Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=direct.bni.co.id comment="BNI Direct (DNS)"
+/ip firewall address-list add list=BANKING address=bnidirect.bni.co.id comment="BNI Direct Corporate (DNS)"
+/ip firewall address-list add list=BANKING address=wondr.bni.co.id comment="BNI Wondr by BNI (DNS)"
 
-# ---- BRI (Bank Rakyat Indonesia) ---- Imperva CDN ----
+# ---- BRI (Bank Rakyat Indonesia) ---- Imperva CDN + Own IP block ----
+/ip firewall address-list add list=BANKING address=103.63.96.0/22 comment="BRI - own IP block (PT Bank Rakyat Indonesia)"
 /ip firewall address-list add list=BANKING address=45.60.44.181 comment="BRI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.60.105.181 comment="BRI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.60.48.181 comment="BRI - ib/brimo (Imperva)"
@@ -52,6 +66,8 @@
 /ip firewall address-list add list=BANKING address=www.bri.co.id comment="BRI - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=ib.bri.co.id comment="BRI - Internet Banking (DNS)"
 /ip firewall address-list add list=BANKING address=brimo.bri.co.id comment="BRI - BRImo App (DNS)"
+/ip firewall address-list add list=BANKING address=api.bri.co.id comment="BRI - API Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=brilink.bri.co.id comment="BRI - BRILink Agent (DNS)"
 
 # ---- BSI (Bank Syariah Indonesia) ---- Imperva CDN + Own IP block ----
 /ip firewall address-list add list=BANKING address=103.23.116.0/23 comment="BSI - own IP block (PT Bank Syariah Mandiri)"
@@ -76,8 +92,10 @@
 # ---- CIMB Niaga ---- Imperva CDN ----
 /ip firewall address-list add list=BANKING address=45.60.46.215 comment="CIMB Niaga (Imperva)"
 /ip firewall address-list add list=BANKING address=45.60.48.215 comment="CIMB Niaga (Imperva)"
+/ip firewall address-list add list=BANKING address=45.60.112.24 comment="CIMB Niaga API (Imperva)"
 /ip firewall address-list add list=BANKING address=cimbniaga.co.id comment="CIMB Niaga (DNS)"
 /ip firewall address-list add list=BANKING address=www.cimbniaga.co.id comment="CIMB Niaga WWW (DNS)"
+/ip firewall address-list add list=BANKING address=api.cimbniaga.co.id comment="CIMB Niaga OCTO Mobile API (DNS)"
 
 # ---- Bank Permata ---- Own IP block: 202.191.2.0/23 ----
 /ip firewall address-list add list=BANKING address=202.191.2.0/23 comment="Permata - own IP block"
@@ -88,6 +106,7 @@
 /ip firewall address-list add list=BANKING address=222.229.80.0/21 comment="Danamon - own IP block"
 /ip firewall address-list add list=BANKING address=danamon.co.id comment="Danamon (DNS)"
 /ip firewall address-list add list=BANKING address=www.danamon.co.id comment="Danamon WWW (DNS)"
+/ip firewall address-list add list=BANKING address=api.danamon.co.id comment="Danamon D-Bank PRO API (DNS)"
 
 # ---- BTN (Bank Tabungan Negara) ---- Imperva CDN ----
 /ip firewall address-list add list=BANKING address=45.223.140.74 comment="BTN (Imperva)"
@@ -95,18 +114,25 @@
 /ip firewall address-list add list=BANKING address=btn.co.id comment="BTN (DNS)"
 /ip firewall address-list add list=BANKING address=www.btn.co.id comment="BTN WWW (DNS)"
 
-# ---- Bank Mega ---- F5/Volterra ----
+# ---- Bank Mega ---- Own IP block: 103.222.239.0/24 ----
+/ip firewall address-list add list=BANKING address=103.222.239.0/24 comment="Bank Mega - own IP block"
 /ip firewall address-list add list=BANKING address=159.60.142.64 comment="Bank Mega (F5)"
 /ip firewall address-list add list=BANKING address=bankmega.com comment="Bank Mega (DNS)"
 /ip firewall address-list add list=BANKING address=www.bankmega.com comment="Bank Mega WWW (DNS)"
+/ip firewall address-list add list=BANKING address=msmile.bankmega.com comment="Bank Mega M-Smile Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=api.bankmega.com comment="Bank Mega API Mobile (DNS)"
 
-# ---- OCBC NISP ---- Multi-ISP ----
+# ---- OCBC NISP ---- Multi-ISP + Imperva ----
 /ip firewall address-list add list=BANKING address=182.23.50.212 comment="OCBC NISP (Lintasarta)"
 /ip firewall address-list add list=BANKING address=103.183.61.40 comment="OCBC NISP"
 /ip firewall address-list add list=BANKING address=14.102.152.32 comment="OCBC NISP"
 /ip firewall address-list add list=BANKING address=103.111.190.234 comment="OCBC NISP (CBN)"
 /ip firewall address-list add list=BANKING address=ocbcnisp.com comment="OCBC NISP (DNS)"
 /ip firewall address-list add list=BANKING address=www.ocbcnisp.com comment="OCBC NISP WWW (DNS)"
+/ip firewall address-list add list=BANKING address=ocbc.id comment="OCBC Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=www.ocbc.id comment="OCBC Mobile WWW (DNS)"
+/ip firewall address-list add list=BANKING address=mobile.ocbc.id comment="OCBC ONE Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=api.ocbc.id comment="OCBC Mobile API (DNS)"
 
 # ---- Panin Bank ---- Akamai CDN ----
 /ip firewall address-list add list=BANKING address=panin.co.id comment="Panin Bank (DNS)"
@@ -116,11 +142,15 @@
 /ip firewall address-list add list=BANKING address=103.247.182.0/23 comment="Maybank - own IP block"
 /ip firewall address-list add list=BANKING address=maybank.co.id comment="Maybank (DNS)"
 /ip firewall address-list add list=BANKING address=www.maybank.co.id comment="Maybank WWW (DNS)"
+/ip firewall address-list add list=BANKING address=m2u.maybank.co.id comment="Maybank M2U Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=api.maybank.co.id comment="Maybank API Mobile (DNS)"
 
 # ---- BCA Digital (blu) ----
 /ip firewall address-list add list=BANKING address=103.11.74.12 comment="BCA Digital - blu.co.id"
 /ip firewall address-list add list=BANKING address=blu.co.id comment="BCA Digital blu (DNS)"
 /ip firewall address-list add list=BANKING address=www.blu.co.id comment="BCA Digital blu WWW (DNS)"
+/ip firewall address-list add list=BANKING address=api.blu.co.id comment="BCA Digital blu API (DNS)"
+/ip firewall address-list add list=BANKING address=app.blu.co.id comment="BCA Digital blu App (DNS)"
 
 # ============================================================================
 # SECTION 2: E-WALLETS & FINTECH

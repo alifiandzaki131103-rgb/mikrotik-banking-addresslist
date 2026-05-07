@@ -10,20 +10,20 @@ Cocok untuk ISP yang ingin:
 
 ## 📋 Daftar Layanan
 
-### 🏦 Bank Indonesia (14 Bank)
+### 🏦 Bank Indonesia (14 Bank + Mobile Banking)
 | Bank | Tipe | Keterangan |
 |------|------|------------|
 | BCA | Own IP Block (`202.6.208.0/20`) | ✅ Stabil permanen |
 | Bank Mandiri | AWS + Akamai CDN | DNS-based recommended |
-| BNI | Imperva CDN | DNS-based recommended |
-| BRI | Imperva CDN | DNS-based recommended |
-| BSI | Imperva CDN | DNS-based recommended |
+| BNI | Own IP Block + Imperva CDN | ✅ Own IP `103.108.254.0/23` + Wondr/Direct |
+| BRI | Own IP Block + Imperva CDN | ✅ Own IP `103.63.96.0/22` + BRImo/BRILink |
+| BSI | Own IP Block + Imperva CDN | ✅ Own IP `103.23.116.0/23` + BSI Mobile endpoints |
 | CIMB Niaga | Imperva CDN | DNS-based recommended |
 | Bank Permata | Own IP Block (`202.191.2.0/23`) | ✅ Stabil permanen |
 | Bank Danamon | Own IP Block (`222.229.80.0/21`) | ✅ Stabil permanen |
 | BTN | Imperva CDN | DNS-based recommended |
-| Bank Mega | F5/Volterra | DNS-based recommended |
-| OCBC NISP | Multi-ISP | IP + DNS |
+| Bank Mega | Own IP Block (`103.222.239.0/24`) | ✅ Own IP + M-Smile Mobile |
+| OCBC NISP | Multi-ISP + Imperva | IP + DNS + OCBC Mobile (ocbc.id) |
 | Panin Bank | Akamai CDN | DNS-based only |
 | Maybank | Own IP Block (`103.247.182.0/23`) | ✅ Stabil permanen |
 | BCA Digital (blu) | Direct | IP + DNS |
@@ -97,7 +97,7 @@ Cocok untuk ISP yang ingin:
    /ip dns set servers=8.8.8.8,1.1.1.1 allow-remote-requests=yes
    ```
 
-2. **4 bank punya IP block sendiri** (BCA, Permata, Danamon, Maybank) — paling stabil, tidak berubah
+2. **7 bank punya IP block sendiri** (BCA, BNI, BRI, BSI, Permata, Danamon, Maybank, Bank Mega) — paling stabil, tidak berubah
 
 3. **Bank di belakang CDN** (BNI, BRI, BSI, BTN, CIMB) — IP bisa berubah, andalkan DNS entry
 
