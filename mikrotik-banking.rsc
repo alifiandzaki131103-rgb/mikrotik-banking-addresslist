@@ -1,7 +1,7 @@
 # ============================================================================
 # MikroTik RouterOS - Indonesian Banking & Payment Address List
 # ============================================================================
-# Generated: 2026-05-02 | Total entries: 126
+# Generated: 2026-05-07 | Total entries: 140 (107 active + 4 optional CDN ranges)
 # 
 # IMPORTANT:
 # - IP addresses are point-in-time snapshots — CDN IPs WILL rotate
@@ -53,11 +53,25 @@
 /ip firewall address-list add list=BANKING address=ib.bri.co.id comment="BRI - Internet Banking (DNS)"
 /ip firewall address-list add list=BANKING address=brimo.bri.co.id comment="BRI - BRImo App (DNS)"
 
-# ---- BSI (Bank Syariah Indonesia) ---- Imperva CDN ----
+# ---- BSI (Bank Syariah Indonesia) ---- Imperva CDN + Own IP block ----
+/ip firewall address-list add list=BANKING address=103.23.116.0/23 comment="BSI - own IP block (PT Bank Syariah Mandiri)"
 /ip firewall address-list add list=BANKING address=45.223.170.70 comment="BSI (Imperva)"
 /ip firewall address-list add list=BANKING address=45.223.166.70 comment="BSI (Imperva)"
+/ip firewall address-list add list=BANKING address=45.223.140.198 comment="BSI Mobile/API (Imperva)"
+/ip firewall address-list add list=BANKING address=45.223.140.74 comment="BSI Digital/QRIS (Imperva)"
 /ip firewall address-list add list=BANKING address=bankbsi.co.id comment="BSI - Main Site (DNS)"
 /ip firewall address-list add list=BANKING address=www.bankbsi.co.id comment="BSI - WWW (DNS)"
+/ip firewall address-list add list=BANKING address=api.bankbsi.co.id comment="BSI - API Gateway (DNS)"
+/ip firewall address-list add list=BANKING address=bsimobilethree.bankbsi.co.id comment="BSI Mobile App (DNS)"
+/ip firewall address-list add list=BANKING address=bsinet.bankbsi.co.id comment="BSI Net Internet Banking (DNS)"
+/ip firewall address-list add list=BANKING address=di-api.bankbsi.co.id comment="BSI Digital API (DNS)"
+/ip firewall address-list add list=BANKING address=liveness.bankbsi.co.id comment="BSI Mobile Liveness/eKYC (DNS)"
+/ip firewall address-list add list=BANKING address=onboarding.bankbsi.co.id comment="BSI Mobile Onboarding (DNS)"
+/ip firewall address-list add list=BANKING address=qrismrprod.bankbsi.co.id comment="BSI QRIS Payment (DNS)"
+/ip firewall address-list add list=BANKING address=bsidvc.bankbsi.co.id comment="BSI Digital Video Call (DNS)"
+/ip firewall address-list add list=BANKING address=videostream.bankbsi.co.id comment="BSI Video Stream (DNS)"
+/ip firewall address-list add list=BANKING address=bsi.co.id comment="BSI Corporate Site (DNS)"
+/ip firewall address-list add list=BANKING address=www.bsi.co.id comment="BSI Corporate WWW (DNS)"
 
 # ---- CIMB Niaga ---- Imperva CDN ----
 /ip firewall address-list add list=BANKING address=45.60.46.215 comment="CIMB Niaga (Imperva)"
