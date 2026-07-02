@@ -66,8 +66,10 @@
 /ip firewall address-list add list=BANKING address=www.bri.co.id comment="BRI - WWW (DNS)"
 /ip firewall address-list add list=BANKING address=ib.bri.co.id comment="BRI - Internet Banking (DNS)"
 /ip firewall address-list add list=BANKING address=brimo.bri.co.id comment="BRI - BRImo App (DNS)"
-/ip firewall address-list add list=BANKING address=api.bri.co.id comment="BRI - API Mobile (DNS)"
+/ip firewall address-list add list=BANKING address=api.bri.co.id comment="BRI - API Mobile / BRIVA (DNS)"
 /ip firewall address-list add list=BANKING address=brilink.bri.co.id comment="BRI - BRILink Agent (DNS)"
+/ip firewall address-list add list=BANKING address=mobile.bri.co.id comment="BRI - Mobile API / BRIVA (DNS)"
+/ip firewall address-list add list=BANKING address=briva.bri.co.id comment="BRI - BRIVA Virtual Account (DNS)"
 
 # ---- BSI (Bank Syariah Indonesia) ---- Imperva CDN + Own IP block ----
 /ip firewall address-list add list=BANKING address=103.23.116.0/23 comment="BSI - own IP block (PT Bank Syariah Mandiri)"

@@ -16,7 +16,7 @@ Cocok untuk ISP yang ingin:
 | BCA | Own IP Block (`202.6.208.0/20`) | ✅ Stabil permanen |
 | Bank Mandiri | AWS + Akamai CDN | DNS-based recommended |
 | BNI | Own IP Block + Imperva CDN | ✅ Own IP `103.108.254.0/23` + Wondr/Direct |
-| BRI | Own IP Block + Imperva CDN | ✅ Own IP `103.63.96.0/22` + BRImo/BRILink |
+| BRI | Own IP Block + Imperva CDN | ✅ Own IP `103.63.96.0/22` + BRImo/BRILink/BRIVA |
 | BSI | Own IP Block + Imperva CDN | ✅ Own IP `103.23.116.0/23` + BSI Mobile endpoints |
 | CIMB Niaga | Imperva CDN | DNS-based recommended |
 | Bank Permata | Own IP Block (`202.191.2.0/23`) | ✅ Stabil permanen |
